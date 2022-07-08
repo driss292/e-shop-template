@@ -1,4 +1,7 @@
 .cart {
+    &.show-cart {
+        right: 0;
+    }
     position: fixed;
     background-color: $bodyColor;
     z-index: $zFixed;
@@ -6,8 +9,9 @@
     box-shadow: -2px 0 4px $shadow;
     height: 100%;
     top: 0;
-    right: 0;
+    right: -100%;
     padding: 3.5rem 2rem;
+    transition: 0.4s;
     .cart__close {
         font-size: 2rem;
         color: $titleColor;
@@ -57,9 +61,35 @@
                     column-gap: 3rem;
                     .cart__amount-content {
                         column-gap: 1rem;
+                        .cart__amount-box {
+                            display: inline-flex;
+                            padding: 0.25rem;
+                            background: $containerColor;
+                            cursor: pointer;
+                        }
+                    }
+                    .cart__amount-trash {
+                        font-size: 1.15rem;
+                        color: $firstColor;
+                        cursor: pointer;
                     }
                 }
             }
+        }
+    }
+    .cart__prices {
+        margin-top: 6rem;
+        @include between;
+        .cart__prices-item,
+        .cart__prices-total {
+            color: $titleColor;
+        }
+        .cart__prices-item {
+            font-size: $smallFS;
+        }
+        .cart__prices-total {
+            font-size: $h3FS;
+            font-weight: $medium;
         }
     }
 }

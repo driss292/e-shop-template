@@ -43,6 +43,19 @@ $mb3: 3rem;
 $zTooltip: 10;
 $zFixed: 100;
 
+/*  Mixins  */
+
+@mixin center {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+@mixin between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 /*  Responsive typography  */
 
 @media screen and (max-width: 992px) {
@@ -78,7 +91,8 @@ body {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
     color: $titleColor;
     font-weight: $medium;
 }
@@ -121,8 +135,8 @@ input {
 }
 
 .container {
-    // max-width: 1068px;
-    max-width: 968px;
+    max-width: 1168px;
+    // max-width: 968px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -140,5 +154,52 @@ input {
         aspect-ratio: 1/1;
         background: $titleColor;
         border-radius: 50%;
+    }
+}
+// .show-cart {
+//     right: 0;
+// }
+
+.swiper-pagination {
+    position: initial;
+    margin-top: $mb25;
+    &-bullet {
+        width: 5px;
+        height: 5px;
+        background: $titleColor;
+        opacity: 1;
+        &-active {
+            width: 1.5rem;
+            height: 5px;
+            border-radius: 0.5rem;
+        }
+    }
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0 0.5rem;
+}
+
+.button {
+    display: inline-block;
+    background: $firstColor;
+    color: $containerColor;
+    padding: 1rem 1.7rem;
+    border-radius: 0.5rem;
+    font-weight: $medium;
+    transition: 0.3s;
+    &:hover {
+        background: $firstColorAlt;
+    }
+    &__icon {
+        font-size: 1.25rem;
+    }
+    &--link {
+        color: $titleColor;
+    }
+    &--flex {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.5rem;
     }
 }

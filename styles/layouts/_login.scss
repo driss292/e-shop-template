@@ -1,0 +1,55 @@
+.login {
+    &.show-login {
+        right: 0;
+    }
+    position: fixed;
+    background-color: $bodyColor;
+    z-index: $zFixed;
+    width: 420px;
+    box-shadow: -2px 0 4px $shadow;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    padding: 3.5rem 2rem;
+    transition: 0.4s;
+    .login__close {
+        font-size: 2rem;
+        color: $titleColor;
+        position: absolute;
+        top: 1.25rem;
+        right: 0.9rem;
+        cursor: pointer;
+    }
+    .login__title-center {
+        font-size: $h2FS;
+        text-align: center;
+        margin-bottom: $mb3;
+    }
+    .login__form {
+        row-gap: 1.5rem;
+        .login__content {
+            background: $containerColor;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem 0.25rem;
+            .login__label {
+                font-size: $smallFS;
+                color: $titleColor;
+            }
+            .login__input {
+                width: 100%;
+                background: $containerColor;
+                color: $textColor;
+                font-size: $normalFS;
+                padding: 0.25rm 0.5rem 0.5rem 0;
+            }
+        }
+        .signup {
+            color: $titleColor;
+            font-size: $smallFS;
+            font-weight: $medium;
+            a {
+                color: $firstColor;
+            }
+        }
+    }
+}
