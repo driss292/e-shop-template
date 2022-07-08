@@ -1,0 +1,62 @@
+.header {
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zFixed;
+    .nav {
+        // height: 5rem;
+        height: $headerHeight + 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 3rem;
+        .login__toggle,
+        .nav__logo,
+        .nav__toggle,
+        .nav__shop {
+            color: $titleColor;
+        }
+        .login__toggle,
+        .nav__toggle,
+        .nav__shop {
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+        .nav__logo {
+            text-transform: lowercase;
+            font-weight: $bold;
+            letter-spacing: 1px;
+            display: inline-flex;
+            align-items: center;
+            column-gap: 0.25rem;
+            &-icon {
+                font-size: 1.25rem;
+            }
+        }
+        .nav__list {
+            display: flex;
+            align-items: center;
+            column-gap: 2rem;
+            .nav__link {
+                color: $titleColor;
+                font-weight: $medium;
+                font-size: $normalFS;
+                transition: 0.3s;
+                &:hover {
+                    color: $firstColor;
+                }
+            }
+        }
+        .nav__btns {
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+            margin-left: auto;
+            .nav__toggle {
+                display: none;
+            }
+        }
+    }
+}

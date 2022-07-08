@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
+
+$headerHeight: 3.5rem;
+
+/*  Colors  */
+$titleColor: hsl(250, 8%, 15%);
+$textColor: hsl(250, 8%, 35%);
+$bodyColor: hsl(250, 60%, 98%);
+$containerColor: #fff;
+$shadow: rgba(38, 38, 38, 0.1);
+/*-------------*/
+$hue: 0;
+$firstColor: hsl(0, 88%, 61%);
+$firstColorAlt: hsl(0, 88%, 58%);
+/*-------------*/
+
+/*  Font & typography  */
+$bodyFont: "Poppins", sans-serif;
+$biggestFS: 4rem;
+$h1FS: 2.25rem;
+$h2FS: 1.5rem;
+$h3FS: 1.25rem;
+$normalFS: 1rem;
+$smallFS: 0.875rem;
+$smallerFS: 0.813rem;
+
+/*  Font weight  */
+$medium: 500;
+$bold: 600;
+
+/*  Marges Bottom  */
+
+$mb05: 0.5rem;
+$mb075: 0.75rem;
+$mb1: 1rem;
+$mb15: 1.5rem;
+$mb2: 2rem;
+$mb25: 2.5rem;
+$mb3: 3rem;
+
+/*  Z-index  */
+
+$zTooltip: 10;
+$zFixed: 100;
+
+/*  Responsive typography  */
+
+@media screen and (max-width: 992px) {
+    $biggestFS: 2rem;
+    $h1FS: 1.5rem;
+    $h2FS: 1.25rem;
+    $h3FS: 1rem;
+    $normalFS: 0.938rem;
+    $smallFS: 0.813rem;
+    $smallerFS: 0.75rem;
+}
+
+/*  RESET  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input {
+    font-family: $bodyFont;
+    font-size: $normalFS;
+}
+
+body {
+    background-color: $bodyColor;
+    color: $textColor;
+}
+h1,
+h2,
+h3 {
+    color: $titleColor;
+    font-weight: $medium;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+button {
+    cursor: pointer;
+}
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+.section {
+    padding: 7rem 0 2rem;
+}
+
+.section__title,
+.breadcrumb__title {
+    font-size: $h1FS;
+}
+.section__title,
+.breadcrumb__subtitle {
+    margin-bottom: $mb3;
+}
+
+.section__title,
+.breadcrumb__title,
+.breadcrumb__subtitle {
+    text-align: center;
+}
+
+.container {
+    // max-width: 1068px;
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid {
+    display: grid;
+}
+.active-link {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.75rem;
+        left: 45%;
+        width: 5px;
+        aspect-ratio: 1/1;
+        background: $titleColor;
+        border-radius: 50%;
+    }
+}
