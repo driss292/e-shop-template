@@ -1,0 +1,70 @@
+.new__container {
+    padding-top: 1rem;
+    .new__content {
+        position: relative;
+        background-color: $containerColor;
+        width: 310px;
+        padding: 2rem 0;
+        border-radius: 1rem;
+        text-align: center;
+        overflow: hidden;
+        .new__tag {
+            position: absolute;
+            top: 8%;
+            left: 8%;
+            background-color: $firstColor;
+            color: #fff;
+            font-size: $smallFS;
+            padding: 0.25rem 0.5rem;
+        }
+
+        .new__img {
+            width: 150px;
+            margin-bottom: $mb1;
+            transition: 0.3s;
+        }
+        .new__title {
+            font-size: $h3FS;
+            font-weight: $medium;
+        }
+        .new__subtitle {
+            display: block;
+            font-size: $smallFS;
+            margin-bottom: $mb1;
+        }
+        .new__prices {
+            display: inline-flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            .new__price {
+                font-weight: $medium;
+                color: $titleColor;
+            }
+            .new__discount {
+                color: $firstColor;
+                font-size: $smallerFS;
+                text-decoration: line-through;
+                font-weight: $medium;
+            }
+        }
+        .new__button {
+            display: inline-flex;
+            padding: 0.5rem;
+            border-radius: 0.25rem 0.25rem 0.75rem 0.25rem;
+            position: absolute;
+            bottom: 0;
+            right: -3rem;
+            .new__icon {
+                font-size: 1.25rem;
+            }
+        }
+        &:hover {
+            .new__button {
+                right: 0;
+            }
+            .new__img {
+                transform: translateY(-0.5rem);
+            }
+        }
+    }
+}
