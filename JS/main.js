@@ -65,6 +65,23 @@ if (loginClose) {
     });
 }
 
+// SHOW MENU
+const menu = document.querySelector("#nav-menu");
+const menuShow = document.querySelector("#nav-toggle");
+const menuClose = document.querySelector("#nav-close");
+
+if (menuShow) {
+    menuShow.addEventListener("click", () => {
+        menu.classList.add("show-menu");
+    });
+}
+
+if (menuClose) {
+    menuClose.addEventListener("click", () => {
+        menu.classList.remove("show-menu");
+    });
+}
+
 // SHOW SCROLL UP
 function scrollUp() {
     const scrollUp = document.querySelector("#scrollup");

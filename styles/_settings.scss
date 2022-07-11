@@ -90,6 +90,9 @@ input {
 body {
     background-color: $bodyColor;
     color: $textColor;
+    @media screen and (max-width: 880px) {
+        margin: $headerHeight 0 0 0;
+    }
 }
 h1,
 h2,
@@ -119,6 +122,9 @@ input {
 
 .section {
     padding: 7rem 0 2rem;
+    @media screen and (max-width: 880px) {
+        padding: 4.5rem 0 2rem;
+    }
 }
 
 .section__title,
@@ -129,6 +135,12 @@ input {
 .breadcrumb__subtitle {
     margin-bottom: $mb3;
 }
+.section__title {
+    @media screen and (max-width: 992px) {
+        font-size: $h2FS;
+        margin-bottom: $mb2;
+    }
+}
 
 .section__title,
 .breadcrumb__title,
@@ -137,10 +149,18 @@ input {
 }
 
 .container {
-    max-width: 1168px;
-    // max-width: 968px;
+    // max-width: 1168px;
+    max-width: 968px;
     margin-left: auto;
     margin-right: auto;
+    @media screen and (max-width: 992px) {
+        margin-left: $mb15;
+        margin-right: $mb15;
+    }
+    @media screen and (max-width: 320px) {
+        margin-left: $mb1;
+        margin-right: $mb1;
+    }
 }
 .grid {
     display: grid;
@@ -175,6 +195,15 @@ input {
             height: 5px;
             border-radius: 0.5rem;
         }
+    }
+    @media screen and (max-width: 1200px) {
+        margin-top: $mb2;
+    }
+    @media screen and (max-width: 992px) {
+        margin-top: $mb2;
+    }
+    @media screen and (max-width: 880px) {
+        margin-bottom: $mb15;
     }
 }
 .swiper-pagination-horizontal.swiper-pagination-bullets

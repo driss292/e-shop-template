@@ -22,15 +22,25 @@
             width: 150px;
             margin-bottom: $mb1;
             transition: 0.3s;
+            @media screen and (max-width: 992px) {
+                width: 120px;
+                margin-bottom: $mb05;
+            }
         }
         .new__title {
             font-size: $h3FS;
             font-weight: $medium;
+            @media screen and (max-width: 992px) {
+                font-size: $normalFS;
+            }
         }
         .new__subtitle {
             display: block;
             font-size: $smallFS;
             margin-bottom: $mb1;
+            @media screen and (max-width: 992px) {
+                margin-bottom: $mb05;
+            }
         }
         .new__prices {
             display: inline-flex;
@@ -65,6 +75,10 @@
             .new__img {
                 transform: translateY(-0.5rem);
             }
+        }
+        @media screen and (max-width: 992px) {
+            width: 240px;
+            padding: 2rem 0 1.5rem 0;
         }
     }
 }

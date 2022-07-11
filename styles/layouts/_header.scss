@@ -16,6 +16,7 @@
         justify-content: space-between;
         align-items: center;
         column-gap: 3rem;
+        .nav__close,
         .login__toggle,
         .nav__logo,
         .nav__toggle,
@@ -52,6 +53,21 @@
                     color: $firstColor;
                 }
             }
+            @media screen and (max-width: 880px) {
+                flex-direction: column;
+                row-gap: 2rem;
+            }
+        }
+        .nav__close {
+            font-size: 2rem;
+            position: absolute;
+            top: 0.9rem;
+            right: 1.25rem;
+            cursor: pointer;
+            display: none;
+            @media screen and (max-width: 880px) {
+                display: block;
+            }
         }
         .nav__btns {
             display: flex;
@@ -60,7 +76,31 @@
             margin-left: auto;
             .nav__toggle {
                 display: none;
+                @media screen and (max-width: 880px) {
+                    display: block;
+                }
             }
+        }
+        .nav__menu {
+            &.show-menu {
+                right: 0;
+            }
+            @media screen and (max-width: 880px) {
+                position: fixed;
+                background-color: $bodyColor;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100%;
+                padding: 6rem 2rem 3.5rem;
+                transition: 0.3s;
+            }
+        }
+        @media screen and (max-width: 880px) {
+            height: $headerHeight;
+        }
+        @media screen and (max-width: 320px) {
+            column-gap: 0;
         }
     }
 }
