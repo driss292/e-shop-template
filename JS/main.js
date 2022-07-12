@@ -20,7 +20,7 @@ var newSwiper = new Swiper(".new-swiper", {
 function scrollHeader() {
     const header = document.querySelector("#header");
     // Si le scroll dépasse 50vh, on ajoute la class "scroll-header"
-    if (this.scrollY >= 50) {
+    if (this.scrollY >= 30) {
         header.classList.add("scroll-header");
     } else {
         header.classList.remove("scroll-header");

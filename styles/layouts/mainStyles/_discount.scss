@@ -8,7 +8,7 @@
     border-radius: 3rem;
     .discount__img {
         width: 200px;
-        @media screen and (max-width: 880px) {
+        @media screen and (max-width: 767px) {
             justify-self: center;
             order: 1;
         }
@@ -16,7 +16,7 @@
     .discount__data {
         padding-left: 6rem;
         text-align: center;
-        @media screen and (max-width: 880px) {
+        @media screen and (max-width: 767px) {
             padding-left: 0;
         }
         .discount__title {
@@ -27,7 +27,7 @@
     @media screen and (max-width: 992px) {
         column-gap: 3rem;
     }
-    @media screen and (max-width: 880px) {
+    @media screen and (max-width: 767px) {
         grid-template-columns: 1fr;
         row-gap: 1.25rem;
         padding: 2.5rem 0 1.5rem;
