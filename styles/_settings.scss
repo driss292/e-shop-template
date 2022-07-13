@@ -10,8 +10,8 @@ $containerColor: #fff;
 $shadow: rgba(38, 38, 38, 0.1);
 /*-------------*/
 $hue: 0;
-$firstColor: hsl(0, 88%, 61%);
-$firstColorAlt: hsl(0, 88%, 45%);
+$firstColor: hsl($hue, 88%, 61%);
+$firstColorAlt: hsl($hue, 88%, 45%);
 $scrollBarColor: hsl(250, 12%, 90%);
 $scrollThumbColor: hsl(250, 12%, 80%);
 /*-------------*/
@@ -108,7 +108,7 @@ a {
     text-decoration: none;
 }
 img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 button {
@@ -184,7 +184,7 @@ input {
 
 .swiper-pagination {
     position: initial;
-    margin-top: $mb15;
+    margin-top: $mb25;
     &-bullet {
         width: 5px;
         height: 5px;
